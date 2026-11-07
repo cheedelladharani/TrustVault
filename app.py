@@ -178,6 +178,8 @@ def login():
         user = User.query.filter_by(username=username).first()
 
         if user and check_password_hash(user.password, password):
+            ensure_initial_admin()
+            db.session.refresh(user)
             session.clear()
             session["user_id"] = user.id
             session["username"] = user.username
