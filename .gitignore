@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Flask
+instance/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Private uploads
+private_uploads/
+uploads/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+Thumbs.db
+*.pem
+*.key
