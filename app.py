@@ -522,11 +522,10 @@ def logout():
 
 # -------------------- RUN APPLICATION --------------------
 
-with app.app_context():
-    db.create_all()
-    ensure_initial_admin()
-
-
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+        ensure_initial_admin()
+
     # Debug mode is suitable only for local development, not deployment.
     app.run(debug=True)
